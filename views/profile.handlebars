@@ -1,0 +1,24 @@
+<br>
+<h2>Act now and sign our petition to stop cruel cosmetics tests on animals </h2></br>
+
+<section id="main-img">
+  <img src="no_animal_testing.jpg" alt="no_animal_testing">
+</section>
+
+<section id="user-input">
+<h2>Please tell us more about yourself</h2>
+<h3 class="error">{{error}}</h3>
+
+<form method="POST" action="/profile">
+  <input type="hidden" name="_csrf" value="{{csrfToken}}">
+  <div class="text-input">
+    <label for="age">Age:</label><br>
+    <input type="number" name="age" id="age" placeholder="age"><br>
+    <label for="city">City:</label><br>
+    <input type="text" name="city" id="city" placeholder="city"><br>
+    <label for="homepage">Homepage:</label><br>
+    <input type="text" name="homepage" id="hompage" placeholder="hompage"><br>
+  </div>
+  <input type="submit" value="CONTINUE" id="input-submit">
+</form>
+</section>

@@ -1,0 +1,32 @@
+{{!-- Code for the logout button included everywhere except register and login page cause we can only logout after login in--}}
+<h1 class="principal-title">A global movement for cruelty free cosmetics</h1>
+<form action="/logout" method="GET">
+    <button type="submit" value="Submit" id="logoutBtn">Logout</button>
+</form>
+<section id="main-img">
+  <img src="no_animal_testing.jpg" alt="no_animal_testing">
+</section>
+<section id="user-input"  class="card">
+  <h2>Edit your profile</h2>
+  <h3 class="error">{{error}}</h3>
+  <form method="POST" action="/profileEdit">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <div class="text-input">
+        <label for="firstname">Firstname:</label><br>
+        <input type="text" name="firstname" id="firstname" value={{firstname}}><br>
+        <label for="lastname">Lastname:</label><br>
+        <input type="text" name="lastname" id="lastname" value={{lastname}}><br>
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" id="email" value={{email}}><br>
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" id="New Password" placeholder="password"><br>
+        <label for="age">Age:</label><br>
+        <input type="number" name="age" id="age" value={{age}}><br>
+        <label for="city">City:</label><br>
+        <input type="text" name="city" id="city" value={{city}}><br>
+        <label for="homepage">Homepage:</label><br>
+        <input type="url" name="homepage" id="hompage" value={{homepage}}><br>
+    </div>
+    <input type="submit" value="UPDATE" id="input-submit">
+  </form>
+</section>

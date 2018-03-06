@@ -1,0 +1,27 @@
+<h1 class="principal-title">Thank you for your signature</h1>
+{{!-- Code for the logout button included everywhere except register and login page cause we can only logout after login in--}}
+<form action="/logout" method="GET">
+    <button type="submit" value="Submit" id="logoutBtn">Logout</button>
+</form>
+<section id="main-img">
+<img src="no_animal_testing.jpg" alt="no_animal_testing">
+</section>
+<section id="user-input" class="card">
+    <p>{{firstname}} {{lastname}}</p>
+    <img src='{{signature}}' id="signature" alt="signature">
+    <div>
+        <form action="/signers">
+            <input type="submit" class="non-button" value="See all signers" />
+        </form>
+    </div>
+    <div>
+        <form action="/profileEdit">
+            <input type="submit" class="non-button" value="Edit your profile" />
+        </form>
+    </div>
+    <div>
+        <form action="/delete" method="post">
+            <input type="submit" class="non-button" name="delete" value="Delete signature" />
+        </form>
+    </div>
+</section>

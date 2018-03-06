@@ -1,0 +1,35 @@
+<h1 class="principal-title">Sign our petition to stop animal testing</h1>
+{{!-- Code for the logout button included everywhere except register and login page cause we can only logout after login in--}}
+<form action="/logout" method="GET">
+    <button type="submit" value="Submit" id="logoutBtn">Logout</button>
+</form>
+<section id="main-img">
+  <img src="no_animal_testing.jpg" alt="no_animal_testing">
+</section>
+
+<section id="user-input" class="card">
+  <h2>Sign the petition</h2>
+  <h3 class="error">{{error}}</h3>
+  <form method="POST" action="/petition">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <div class="text-input">
+      <div style="text-align:left;color:black">
+        <label for="first">First name:</label>
+        <span style="padding-left:15px">{{firstname}}</span>
+      </div>
+      <div style="text-align:left;color:black">
+        <label for="last">Last name:</label>
+        <span style="padding-left:15px">{{lastname}}</span>
+      </div>
+      <br>
+      <label for="signature">Sign here:</label>
+    </div>
+    <input type ="hidden" name="signature"><br>
+
+    <div id="canvas-resize">
+      <canvas id="signature" width="400" height="100"></canvas>
+    </div>
+
+    <input type="submit" value="Submit" id="input-submit"><br>
+  </form>
+</section>

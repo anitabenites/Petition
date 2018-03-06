@@ -1,0 +1,23 @@
+{{!-- Code for the logout button included everywhere except register and login page cause we can only logout after login in--}}
+<h2 class="principal-title">Thank you for your support!!</h2> <br>
+<form action="/logout" method="GET">
+    <button type="submit" value="Submit" id="logoutBtn">Logout</button>
+</form>
+<section id="main-img">
+<img src="/no_animal_testing.jpg" alt="no_animal_testing">
+</section>
+
+
+<div id="user-input" class="signersList card">
+    <h2>Signers: </h2>
+    <ul id="signersList">
+        {{#each signers}}
+        <ul>
+            {{#if homepage}}
+            <a href="{{homepage}}">{{first_name}} {{last_name}}</a>
+            {{else}} {{first_name}} {{last_name}} {{/if}}
+            ({{age}}) <a href="/petition/signers/{{city}}">{{city}}</a>
+        </ul>
+        {{/each}}
+    </ul>
+</div>
