@@ -16,9 +16,9 @@ The idea behind this project is to create an online petition that visitors can s
 
 ### Images:
 
-<p align="center"><img src="screenshots/edit.png"></p>
-
 <p align="center"><img src="screenshots/home.png"></p>
+
+<p align="center"><img src="screenshots/edit.png"></p>
 
 <p align="center"><img src="screenshots/signature.png"></p>
 
